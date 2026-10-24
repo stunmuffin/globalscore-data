@@ -28,48 +28,72 @@
 application (package <code>com.runbytestudio.globalscore</code>) published by Runbyte Studio.</p>
 
 <h2>Short version</h2>
-<p>GlobalScore does <strong>not collect, transmit, or share any personal data</strong>.
-The app has no accounts, no analytics, no advertising and no tracking. Its only network
-activity is downloading <em>public football data packages</em> from GitHub.</p>
+<p>GlobalScore collects <strong>no personal data</strong> and has no accounts or
+analytics. The app has no tracking of its own. Its network activity is (1)
+downloading <em>public football data packages</em> from GitHub and (2) loading
+ads from Google AdMob, which may process standard device identifiers such as
+the advertising ID.</p>
 
 <h2>What the app does</h2>
 <p>GlobalScore displays football fixtures and statistical score predictions that the
 developer publishes as read-only data packages. No model runs on your device and no
-data leaves your device.</p>
+personal data leaves your device.</p>
 
 <h2>Network access</h2>
 <ul>
-  <li>The app requests the <code>INTERNET</code> permission for one purpose: downloading
-      the public data packages (a manifest plus <code>fixtures.json</code> and
-      <code>predictions.json</code>) from
-      <code>github.com/stunmuffin/globalscore-data</code> (GitHub Releases).</li>
-  <li>Downloads are integrity-checked (SHA-256) against the published manifest.</li>
-  <li>These requests carry no user identifiers — there are none in the app.</li>
-  <li>GitHub (GitHub, Inc.) delivers the files; GitHub's own privacy policy applies to
-      its infrastructure. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's privacy statement</a>.</li>
-  <li>The app works fully offline: it keeps the last successfully verified package and
-      also bundles an initial package inside the APK.</li>
+  <li>The app requests the <code>INTERNET</code> permission for two purposes:
+      downloading the public data packages (a manifest plus
+      <code>fixtures.json</code> and <code>predictions.json</code>) from
+      <code>github.com/stunmuffin/globalscore-data</code> (GitHub Releases), and
+      loading ads.</li>
+  <li>Package downloads are integrity-checked (SHA-256) against the published
+      manifest and carry no user identifiers — there are none in the app.</li>
+  <li>The app works fully offline: it keeps the last successfully verified
+      package and also bundles an initial package inside the APK.</li>
+</ul>
+
+<h2>Advertising</h2>
+<ul>
+  <li>Banner and rewarded ads are served by <strong>Google AdMob</strong>
+      (Google Mobile Ads SDK). Google's privacy practices apply to ad serving;
+      see <a href="https://policies.google.com/technologies/partner-sites">How
+      Google uses information from sites or apps that use our services</a>.</li>
+  <li>AdMob may collect and process device identifiers (for example the
+      advertising ID) and coarse location signals as part of ad serving, in
+      line with Google's policies.</li>
+  <li>The current release uses Google's official <strong>test ad unit IDs</strong>;
+      real ads require an AdMob account and will be declared here when enabled.</li>
+  <li>Ads are optional: match lists and the prediction history are always free
+      to browse. Only opening the detailed prediction of a match you have not
+      opened before can require watching a rewarded ad, and matches you have
+      already opened never require another ad.</li>
+  <li>There is no advertising on the prediction content itself, and ads are
+      never presented as predictions or results.</li>
 </ul>
 
 <h2>Data stored on your device</h2>
-<p>The app stores the downloaded data package in its private cache directory so it can
-open instantly and work offline. This cache contains no personal information. You can
-remove it at any time via Android Settings → Apps → GlobalScore → Storage → Clear data,
-or by uninstalling the app.</p>
+<p>The app stores the downloaded data package in its private cache directory,
+plus a small local state file (chosen language, remaining prediction credits,
+the list of matches you have opened, number of ads watched) so your choices
+survive restarts. None of this contains personal information. You can remove
+it at any time via Android Settings → Apps → GlobalScore → Storage → Clear
+data, or by uninstalling the app. This local state is never transmitted.</p>
 
 <h2>What we do NOT do</h2>
 <ul>
   <li>No accounts, sign-ins, or authentication.</li>
-  <li>No analytics, crash reporting, or usage statistics.</li>
-  <li>No advertising or ad SDKs.</li>
-  <li>No device identifiers, location, contacts, or any other personal data.</li>
-  <li>No data sharing with third parties — there is no data to share.</li>
+  <li>No analytics, crash reporting, or usage statistics of our own.</li>
+  <li>No device identifiers, location, contacts, or other personal data
+      collected by the app itself.</li>
+  <li>No data sharing with third parties by the app — the only third parties
+      involved are the content hosts (GitHub) and the ad provider (Google
+      AdMob) described above.</li>
 </ul>
 
 <h2>Children</h2>
 <p>The app is a general-audience sports statistics viewer and is not directed at
-children under 13. Since no personal data is collected from anyone, no data is collected
-from children either.</p>
+children under 13. No personal data is collected from anyone by the app
+itself.</p>
 
 <h2>Data sources</h2>
 <p>Fixture data is derived from the OpenFootball <code>football.json</code> dataset
