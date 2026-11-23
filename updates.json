@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "updated_at_utc": "2026-11-19T17:45:00+00:00",
+  "_comment": "Yayinlanmadan ONCE Play'de yeni surumun (1.0.5 / code 7) gercekten yayinda oldugundan emin ol. Yayinlama araci: tools/publish_updates_json.ps1 (gh api ile globalscore-data reposuna commitler; GitHub Pages sunar). NOT: code 6 (19 Kasim bozuk 1.0.4 AAB'si - dart-definesiz) Play'e yuklendi ve yakilmis sayilir; gecerli uretim surumu 1.0.5+7 (SHA 2661ee35...893a9).",
+  "app": {
+    "latest_version_name": "1.0.5",
+    "latest_version_code": 7,
+    "update_url": "https://play.google.com/store/apps/details?id=com.runbytestudio.globalscore",
+    "notes_tr": "Yeni Puan Durumu sekmesi: 10 ligin guncel puan tablolari (Super Lig dahil), favori takimlar yildizli. Veri kesimi 18.11.2026; tablolar dogrulanmis skorlardan hesaplanir.",
+    "notes_en": "New Standings tab: current points tables for 10 leagues (incl. Super Lig), favourite teams starred. Data cut-off 18 Nov 2026; tables computed from verified results."
+  },
+  "data": {
+    "manifest_url": "https://github.com/stunmuffin/globalscore-data/releases/latest/download/manifest.json"
+  }
+}
